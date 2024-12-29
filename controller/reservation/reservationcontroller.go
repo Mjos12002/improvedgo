@@ -1,6 +1,7 @@
 package reservation
 
 import (
+	"fmt"
 	carmodel "motorparking/model/car"
 	customermodel "motorparking/model/customer"
 	parkingmodel "motorparking/model/parking"
@@ -30,5 +31,6 @@ func CreateReservation() {
 		ParkingLot: 2,
 		Parking:    parking,
 	}
+	fmt.Println(reservation.CalculateAge(reservation.Date))
 	reservationservice.CreateReservation(reservation)
 }

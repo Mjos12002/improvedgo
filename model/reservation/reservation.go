@@ -14,3 +14,7 @@ type Reservation struct {
 	ParkingLot int
 	Parking    parking.Parking
 }
+
+func (r Reservation) CalculateAge(d time.Time) int {
+	return int(time.Now().Sub(d))
+}
